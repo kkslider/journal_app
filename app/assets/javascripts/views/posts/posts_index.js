@@ -1,24 +1,4 @@
-JournalApp.Views.PostsIndex = Backbone.View.extend({
-  // render :function() {
-  //   
-  //   var ul = $("<ul></ul>");
-  //   this.collection.each(function(post) {
-  //     ul.append(
-  //       $("<li></li>").html(post.get("title") + " " + post.get("body"))
-  //     )
-  //   });
-  //   
-  //   // unnecessary, backbone handles .models in collection
-  //   // _(that.collection.models).each(function (post) {
-  //     // ul.append(
-  //     //   $("<li></li>").text(post.get("title"))
-  //     // )
-  //   // });
-  //   
-  //   this.$el.html(ul);
-  //   return this;
-  // }
-  
+JournalApp.Views.PostsIndex = Backbone.View.extend({  
   
   template: JST["posts/index"],
   

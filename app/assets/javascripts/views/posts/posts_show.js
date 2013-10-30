@@ -1,5 +1,9 @@
 JournalApp.Views.PostsShow = Backbone.View.extend({
   template: JST["posts/show"],
+    
+  // events: {
+  //   "dblclick "
+  // },
   
   render: function() {
     var renderedContent = this.template({

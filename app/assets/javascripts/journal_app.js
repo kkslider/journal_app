@@ -12,10 +12,14 @@ window.JournalApp = {
     //   collection: JournalApp.posts
     // });
     
+    var postsIndex = new JournalApp.Views.PostsIndex({
+      collection: JournalApp.posts
+    });
+    
     JournalApp.posts.fetch({
       success: function() {
-        // $("#insert").html(postsIndex.render().$el);
         new JournalApp.PostRouter();
+        $("#sidebar").html(postsIndex.render().$el);
         Backbone.history.start();
       }
     });

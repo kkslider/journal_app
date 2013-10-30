@@ -23,6 +23,7 @@ JournalApp.Views.PostsNew = Backbone.View.extend({
       success: function() {
         JournalApp.posts.add(post);
         Backbone.history.navigate("", { trigger: true });
+        $("input[type=text]").val("");
       }
     });
   }
