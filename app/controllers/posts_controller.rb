@@ -26,6 +26,10 @@ class PostsController < ApplicationController
     render :json => "NICE! DESTROYED!", status: 200
     # if @post.destroy
   end
+  
+  # def show
+  #   
+  # end
 end
 
 

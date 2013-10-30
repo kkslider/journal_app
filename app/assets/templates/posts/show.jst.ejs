@@ -1,8 +1,11 @@
 <h1><%= title %></h1>
 
 <h2>Title</h2>
-<%= post.title %>
+<%= post.escape("title") %>
 <br>
 
 <h2>Body</h2>
-<%= post.body %>
+<%= post.escape("body") %>
+<br>
+<br>
+<a href="/">Back</a>
