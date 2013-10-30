@@ -1,9 +1,9 @@
 JournalApp.PostRouter = Backbone.Router.extend({
   routes: {
     "": "showPostsIndex",
+    "posts/new": "showNewPost",
     "posts/:id": "showPostDetail",
     "posts/:id/edit": "editPostDetail"
-    // "posts/:id" : "updatePostDetail"
   },
   
   showPostsIndex: function() {
@@ -11,7 +11,6 @@ JournalApp.PostRouter = Backbone.Router.extend({
       collection: JournalApp.posts
     });
   
-    // indexView.render();
     $("body").html(indexView.render().$el);
   },
     
@@ -29,6 +28,11 @@ JournalApp.PostRouter = Backbone.Router.extend({
     });
     
     $("body").html(editView.render().$el);  
+  },
+    
+  showNewPost: function() {
+    var newView = new JournalApp.Views.PostsNew();
+    $("body").html(newView.render().$el);
   }  
   
 });
