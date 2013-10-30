@@ -48,6 +48,5 @@ JournalApp.Views.PostsIndex = Backbone.View.extend({
     
     post.destroy()
     // console.log(this.model.fetch({ id: 1 }));
-  },
-
+  }
 });

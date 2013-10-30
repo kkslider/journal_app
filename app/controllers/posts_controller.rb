@@ -27,9 +27,16 @@ class PostsController < ApplicationController
     # if @post.destroy
   end
   
-  # def show
-  #   
-  # end
+  def update
+    @post = Post.find(params[:id])
+    
+    if @post.update_attributes(params[:post])
+      # redirect_to posts_url
+      render :json => @post
+    else
+      render :json => @post.errors, :status => 422
+    end
+  end
 end
 
 

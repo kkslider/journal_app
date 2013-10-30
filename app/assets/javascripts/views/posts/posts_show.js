@@ -1,9 +1,5 @@
 JournalApp.Views.PostsShow = Backbone.View.extend({
   template: JST["posts/show"],
-  //   
-  // initialize: function(option) {
-  //   
-  // },
   
   render: function() {
     var renderedContent = this.template({
