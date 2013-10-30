@@ -18,6 +18,14 @@ class PostsController < ApplicationController
       format.json { render :json => @posts }
     end
   end
+  
+  def destroy
+    @post = Post.find(params[:id])
+    
+    @post.destroy
+    render :json => "NICE! DESTROYED!", status: 200
+    # if @post.destroy
+  end
 end
 
 
