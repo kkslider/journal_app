@@ -6,13 +6,13 @@ JournalApp.PostRouter = Backbone.Router.extend({
     "posts/:id/edit": "editPostDetail"
   },
   
-  // showPostsIndex: function() {
-  //   var indexView = new JournalApp.Views.PostsIndex({
-  //     collection: JournalApp.posts
-  //   });
-  // 
-  //   $("#sidebar").html(indexView.render().$el);
-  // },
+  showPostsIndex: function() {
+    var indexView = new JournalApp.Views.PostsIndex({
+      collection: JournalApp.posts
+    });
+  
+    $("#sidebar").html(indexView.render().$el);
+  },
     
   showPostDetail: function(id) {
     var showView = new JournalApp.Views.PostsShow({
